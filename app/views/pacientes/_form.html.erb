@@ -36,7 +36,15 @@
     <%= form.text_field :historial %>
   </div>
 
+  <div class="control-group">
+    <%= form.label "Estado Estudio: ", class: 'control-label' %>
+    <div class = "controls">
+      <%= form.select(:status_type, options_for_select([['Hecho', 'Hecho'],['Pendiente','Pendiente' ]]), {include_blank: true} )%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
 <% end %>

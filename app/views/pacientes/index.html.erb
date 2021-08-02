@@ -10,6 +10,7 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Historial</th>
+      <th>Estado de estudios</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
         <td><%= paciente.phone %></td>
         <td><%= paciente.email %></td>
         <td><%= paciente.historial %></td>
+        <td><%= paciente.status_type %></td>
         <td><%= link_to 'Show', paciente %></td>
         <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
         <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>

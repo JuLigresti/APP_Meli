@@ -2,9 +2,6 @@
 
 <%= render 'form', paciente: @paciente %>
 
-options_for_select({ "Basic" => "$20", "Plus" => "$40" }, "$40")
-# => <option value="$20">Basic</option>
-# => <option value="$40" selected="selected">Plus</option>
 
 <%= link_to 'Show', @paciente %> |
 <%= link_to 'Back', pacientes_path %>
