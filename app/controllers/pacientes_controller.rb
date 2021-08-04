@@ -4,6 +4,21 @@ class PacientesController < ApplicationController
   # GET /pacientes or /pacientes.json
   def index
     @pacientes = Paciente.all
+    
+    if params[:search_by_first_name] && params[:search_by_first_name] != ""
+      @pacientes = @pacientes.where("first_name like ?", 
+      "%# {params[:search_by_first_name]}%")
+    end
+
+    if params[:search_by_last_name] && params[:search_by_last_name] != ""
+      @pacientes = @pacientes.where("last_name like ?", 
+      "%# {params[:search_by_last_name]}%")
+    end
+
+    if params[:search_by_phone] && params[:search_by_phone] != ""
+      @pacientes = @pacientes.where("phone like ?", 
+      "%# {params[:search_by_phone]}%")
+    end
   end
 
   # GET /pacientes/1 or /pacientes/1.json
