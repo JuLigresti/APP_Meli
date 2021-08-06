@@ -4,7 +4,7 @@ class PacientesController < ApplicationController
   # GET /pacientes or /pacientes.json
   def index
     @pacientes = Paciente.all
-    
+    #Todavia no funciona
     if params[:search_by_first_name] && params[:search_by_first_name] != ""
       @pacientes = @pacientes.where("first_name like ?", 
       "%# {params[:search_by_first_name]}%")
