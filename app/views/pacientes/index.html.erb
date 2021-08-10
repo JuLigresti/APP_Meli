@@ -3,24 +3,6 @@
 <h1>Pacientes</h1>
 
 
-<%= form_with pacientes: '/search', method: :get, local: true do |f| %>
-  <%= f.label :first_name, "Search for:" %>
-  <%= f.text_field :first_name, id: :first_name %>
-  <%= f.submit "Search" %>
-<% end %>
-
-
-<%= form_tag "/pacientes", method: "GET" do %>
-  <%= label_tag :search_by_first_name %>
-  <%= text_field_tag :search_by_first_name, params[:search_by_first_name] %>
-  <%= label_tag :search_by_last_name %>
-  <%= text_field_tag :search_by_last_name, params[:search_by_last_name] %>
-  <%= label_tag :search_by_phone %>
-  <%= text_field_tag :search_by_phone, params[:search_by_phone] %>
-  <%= submit_tag "Search" %>
-<% end %>
-
-
 <table>
   <thead>
     <tr>
