@@ -4,7 +4,7 @@
 
 <%= render 'pacientes/search_form'%>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th><%= sort_link(@q, :first_name, "Nombre(s)", default_order: :asc) %></th>
@@ -27,7 +27,6 @@
         <td><%= paciente.email %></td>
         <td><%= paciente.historial %></td>
         <td><%= paciente.status_type %></td>
-        <td><%= estudio.name %></td>
         <td><%= link_to 'Show', paciente %></td>
         <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
         <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
