@@ -3,13 +3,12 @@ class PacientesController < ApplicationController
 
   # GET /pacientes or /pacientes.json
   def index
-    @pacientes = Paciente.all
+
+    @q = Paciente.ransack(params[:q])
+    @pacientes = @q.result(distinct: true)
 
   end
 
-  def search
-    @pacientes = Paciente.where("last_name OR first_name LIKE ?",  params[:q])
-  end
   # GET /pacientes/1 or /pacientes/1.json
   def show
   end

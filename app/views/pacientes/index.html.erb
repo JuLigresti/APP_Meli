@@ -2,14 +2,15 @@
 
 <h1>Pacientes</h1>
 
+<%= render 'pacientes/search_form'%>
 
 <table>
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th><%= sort_link(@q, :first_name, "Nombre(s)", default_order: :asc) %></th>
+      <th><%= sort_link(@q, :last_name, "Apellido", default_order: :asc) %></th>
       <th>Phone</th>
-      <th>Email</th>
+      <th><%= sort_link(@q, :email, "E-Mail", default_order: :asc) %></th>      
       <th>Historial</th>
       <th>Estado de estudios</th>
       <th colspan="3"></th>
