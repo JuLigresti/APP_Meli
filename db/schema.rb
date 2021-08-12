@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_12_025648) do
+ActiveRecord::Schema.define(version: 2021_08_12_175811) do
+
+  create_table "estudios", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.text "description"
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pacientes", force: :cascade do |t|
     t.string "first_name"
@@ -21,6 +30,8 @@ ActiveRecord::Schema.define(version: 2021_08_12_025648) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status_type"
+    t.string "EstudioId"
+    t.string "estudio_id"
   end
 
   create_table "users", force: :cascade do |t|

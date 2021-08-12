@@ -12,28 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :first_name %>
+    <%= form.label "Nombre(s)" %>
     <%= form.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
+    <%= form.label "Apellido(s)" %>
     <%= form.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label "Teléfono" %>
     <%= form.text_field :phone %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label "Correo Eletrónico" %>
     <%= form.text_field :email %>
   </div>
 
   <div class="field">
     <%= form.label :historial %>
-    <%= form.text_field :historial %>
+    <%= form.text_area :historial %>
+  </div>
+
+  <div class="control-group">
+    <%= form.label "Estudio:", class: 'control-label' %>
+    <div class = "controls">
+    <%= collection_select(:paciente, :estudio_id, Estudio.all, :id, :name, {}, { :multiple => false} )%>
   </div>
 
   <div class="control-group">

@@ -13,6 +13,7 @@
       <th><%= sort_link(@q, :email, "E-Mail", default_order: :asc) %></th>      
       <th>Historial</th>
       <th>Estado de estudios</th>
+      <th>Estudio</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= paciente.email %></td>
         <td><%= paciente.historial %></td>
         <td><%= paciente.status_type %></td>
+        <td><%= estudio.name %></td>
         <td><%= link_to 'Show', paciente %></td>
         <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
         <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -36,5 +38,6 @@
 
 <br>
 
-<%= link_to 'Inicio', pacientes_path %> |
-<%= link_to 'New Paciente', new_paciente_path %>
+<%= link_to 'Inicio', root_path%> | 
+<%= link_to 'Por Defecto', pacientes_path %> |
+<%= link_to 'Añadir paciente', new_paciente_path %>
