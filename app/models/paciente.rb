@@ -1,5 +1,5 @@
 class Paciente < ApplicationRecord
 
-    belongs_to :estudio
+    has_many :estudios
 
 end
