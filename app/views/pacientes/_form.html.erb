@@ -11,36 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="field form-group">
+    <%= form.label "Nombre(s)" %>
+    <%= form.text_field :first_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="field form-group">
+    <%= form.label "Apellido(s)" %>
+    <%= form.text_field :last_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+  <div class="field form-group">
+    <%= form.label "Teléfono" %>
+    <%= form.text_field :phone, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="field form-group">
+    <%= form.label "Correo Electrónico" %>
+    <%= form.text_field :email, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :historial %>
-    <%= form.text_field :historial %>
+    <%= form.text_area :historial, class: "form-control" %>
   </div>
+
+
+  <div class="control-group">
+    <%= form.label "Estudio: ", class: 'control-label' %>
+    <div class = "controls">
+      <%= form.select(:study_type, options_for_select([['HMGR', 'Hemograma'],['ORNC','Orina Cultivo' ]]), {include_blank: true} )%>
+  </div>
+
+
+
 
   <div class="control-group">
     <%= form.label "Estado Estudio: ", class: 'control-label' %>
     <div class = "controls">
       <%= form.select(:status_type, options_for_select([['Hecho', 'Hecho'],['Pendiente','Pendiente' ]]), {include_blank: true} )%>
   </div>
+
+  <br/>
 
   <div class="actions">
     <%= form.submit %>
