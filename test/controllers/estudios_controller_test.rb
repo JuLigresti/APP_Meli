@@ -17,7 +17,7 @@ class EstudiosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create estudio" do
     assert_difference('Estudio.count') do
-      post estudios_url, params: { estudio: { category: @estudio.category, code: @estudio.code, description: @estudio.description, name: @estudio.name } }
+      post estudios_url, params: { estudio: { comments: @estudio.comments, date: @estudio.date, estudio_type_id: @estudio.estudio_type_id, paciente_id: @estudio.paciente_id } }
     end
 
     assert_redirected_to estudio_url(Estudio.last)
@@ -34,7 +34,7 @@ class EstudiosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update estudio" do
-    patch estudio_url(@estudio), params: { estudio: { category: @estudio.category, code: @estudio.code, description: @estudio.description, name: @estudio.name } }
+    patch estudio_url(@estudio), params: { estudio: { comments: @estudio.comments, date: @estudio.date, estudio_type_id: @estudio.estudio_type_id, paciente_id: @estudio.paciente_id } }
     assert_redirected_to estudio_url(@estudio)
   end
 

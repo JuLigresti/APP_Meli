@@ -1,6 +1,6 @@
 class Estudio < ApplicationRecord
 
-    belongs_to :pacientes
-#    has_one :estudio_type
+    belongs_to :paciente
+    belongs_to :estudio_type
 
 end

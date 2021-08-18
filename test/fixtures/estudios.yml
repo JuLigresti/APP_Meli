@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  code: MyString
-  name: MyString
-  description: MyText
-  category: MyString
+  date: 2021-08-17 21:27:15
+  paciente_id: 1
+  estudio_type_id: 1
+  comments: MyText
 
 two:
-  code: MyString
-  name: MyString
-  description: MyText
-  category: MyString
+  date: 2021-08-17 21:27:15
+  paciente_id: 1
+  estudio_type_id: 1
+  comments: MyText

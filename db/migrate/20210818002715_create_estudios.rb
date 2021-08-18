@@ -1,10 +1,10 @@
 class CreateEstudios < ActiveRecord::Migration[6.1]
   def change
     create_table :estudios do |t|
-      t.string :code
-      t.string :name
-      t.text :description
-      t.string :category
+      t.datetime :date
+      t.integer :paciente_id
+      t.integer :estudio_type_id
+      t.text :comments
 
       t.timestamps
     end

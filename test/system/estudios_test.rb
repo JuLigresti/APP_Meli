@@ -14,10 +14,10 @@ class EstudiosTest < ApplicationSystemTestCase
     visit estudios_url
     click_on "New Estudio"
 
-    fill_in "Category", with: @estudio.category
-    fill_in "Code", with: @estudio.code
-    fill_in "Description", with: @estudio.description
-    fill_in "Name", with: @estudio.name
+    fill_in "Comments", with: @estudio.comments
+    fill_in "Date", with: @estudio.date
+    fill_in "Estudio type", with: @estudio.estudio_type_id
+    fill_in "Paciente", with: @estudio.paciente_id
     click_on "Create Estudio"
 
     assert_text "Estudio was successfully created"
@@ -28,10 +28,10 @@ class EstudiosTest < ApplicationSystemTestCase
     visit estudios_url
     click_on "Edit", match: :first
 
-    fill_in "Category", with: @estudio.category
-    fill_in "Code", with: @estudio.code
-    fill_in "Description", with: @estudio.description
-    fill_in "Name", with: @estudio.name
+    fill_in "Comments", with: @estudio.comments
+    fill_in "Date", with: @estudio.date
+    fill_in "Estudio type", with: @estudio.estudio_type_id
+    fill_in "Paciente", with: @estudio.paciente_id
     click_on "Update Estudio"
 
     assert_text "Estudio was successfully updated"

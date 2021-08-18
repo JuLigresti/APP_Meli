@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Category</th>
+      <th>Date</th>
+      <th>Paciente</th>
+      <th>Estudio type</th>
+      <th>Comments</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @estudios.each do |estudio| %>
       <tr>
-        <td><%= estudio.code %></td>
-        <td><%= estudio.name %></td>
-        <td><%= estudio.description %></td>
-        <td><%= estudio.category %></td>
+        <td><%= estudio.date %></td>
+        <td><%= estudio.paciente_id %></td>
+        <td><%= estudio.estudio_type_id %></td>
+        <td><%= estudio.comments %></td>
         <td><%= link_to 'Show', estudio %></td>
         <td><%= link_to 'Edit', edit_estudio_path(estudio) %></td>
         <td><%= link_to 'Destroy', estudio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,8 +29,5 @@
 </table>
 
 <br>
-<br/>
 
-<%= link_to 'Inicio', root_path%> | 
-<%= link_to 'Por Defecto', estudios_path %> |
-<%= link_to 'Crear nuevo estudio', new_estudio_path %>
+<%= link_to 'New Estudio', new_estudio_path %>

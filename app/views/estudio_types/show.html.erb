@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @estudio_type.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @estudio_type.code %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @estudio_type.instructions %>
+</p>
+
+<%= link_to 'Edit', edit_estudio_type_path(@estudio_type) %> |
+<%= link_to 'Back', estudio_types_path %>

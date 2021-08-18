@@ -1,0 +1,2 @@
+module EstudioTypesHelper
+end

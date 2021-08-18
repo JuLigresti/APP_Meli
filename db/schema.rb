@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_12_175811) do
+ActiveRecord::Schema.define(version: 2021_08_18_002715) do
+
+  create_table "estudio_types", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.text "instructions"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "estudios", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.text "description"
-    t.string "category"
+    t.datetime "date"
+    t.integer "paciente_id"
+    t.integer "estudio_type_id"
+    t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_08_12_175811) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status_type"
+    t.string "study_type"
     t.string "EstudioId"
     t.string "estudio_id"
   end
