@@ -13,6 +13,8 @@ class EstudiosController < ApplicationController
   # GET /estudios/new
   def new
     @estudio = Estudio.new
+    @paciente = Paciente.all
+    @estudio_type = EstudioType.all
   end
 
   # GET /estudios/1/edit

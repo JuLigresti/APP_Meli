@@ -38,9 +38,7 @@
 
   <div class="control-group">
     <%= form.label "Estudio:", class: 'control-label' %>
-    <div class = "controls">
-    <%= collection_select(:paciente, :estudio_id, Estudio.all, :id, :name, {}, { :multiple => false} )%>
-  </div>
+  
 
   <div class="control-group">
     <%= form.label "Estado Estudio: ", class: 'control-label' %>

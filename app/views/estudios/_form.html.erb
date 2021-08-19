@@ -31,6 +31,14 @@
     <%= form.text_area :comments %>
   </div>
 
+  <div class ="control-group">
+    <%=form.label :paciente, class: "control-group"%>
+    <div class ="controls">
+      <%= collection_select(:paciente, :paciente_id, Paciente.all, :id, :name) %>
+
+
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
