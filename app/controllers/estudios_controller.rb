@@ -13,8 +13,7 @@ class EstudiosController < ApplicationController
   # GET /estudios/new
   def new
     @estudio = Estudio.new
-    @paciente = Paciente.all
-    @estudio_type = EstudioType.all
+    
   end
 
   # GET /estudios/1/edit
@@ -66,6 +65,6 @@ class EstudiosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def estudio_params
-      params.require(:estudio).permit(:date, :paciente_id, :estudio_type_id, :comments)
+      params.require(:estudio).permit(:date, :paciente_id, :estudio_type_id, :comments, :status)
     end
 end

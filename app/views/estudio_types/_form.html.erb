@@ -10,23 +10,29 @@
       </ul>
     </div>
   <% end %>
-
+<div>
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <br/>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :code %>
-    <%= form.text_field :code %>
+    
+    <%= form.text_field :code, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :instructions %>
-    <%= form.text_area :instructions %>
+    <br/>
+    <%= form.text_area :instructions, class: "form-control" %>
   </div>
+
+  <br/>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>
