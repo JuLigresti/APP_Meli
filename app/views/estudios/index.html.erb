@@ -2,8 +2,8 @@
 
 <h1>Estudios</h1>
 
-<table class="table table-striped table-hover">
-  <thead>
+<table class="table  table-light table-striped table-bordered table-hover">
+  <thead class="table-dark">
     <tr>
       <th>Fecha</th>
       <th>Paciente</th>
@@ -22,9 +22,9 @@
         <td><%= link_to estudio.estudio_type.nom, estudio %></td>
         <td><%= estudio.comments %></td>
         <td><%= estudio.status %></td>
-        <td><%= link_to 'Show', estudio %></td>
-        <td><%= link_to 'Edit', edit_estudio_path(estudio) %></td>
-        <td><%= link_to 'Destroy', estudio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', estudio, class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Editar', edit_estudio_path(estudio), class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Eliminar', estudio, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

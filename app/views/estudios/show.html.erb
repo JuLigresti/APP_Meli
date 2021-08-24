@@ -1,24 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @estudio.date %>
-</p>
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @estudio.paciente.full_name %> |
+    <%= @estudio.estudio_type.nom %>
+  </h1>
+  <p class="lead">
+    <%= @estudio.date %> /
+    <%= @estudio.comments %>
+    
+  </p>
+  <br/>
 
-<p>
-  <strong>Paciente:</strong>
-  <%= @estudio.paciente_id %>
-</p>
-
-<p>
-  <strong>Estudio type:</strong>
-  <%= @estudio.estudio_type_id %>
-</p>
-
-<p>
-  <strong>Comments:</strong>
-  <%= @estudio.comments %>
-</p>
-
-<%= link_to 'Edit', edit_estudio_path(@estudio) %> |
-<%= link_to 'Back', estudios_path %>
+<%= link_to 'Editar', edit_estudio_path(@estudio), class: "btn btn-secondary" %> |
+<%= link_to 'Atrás', estudios_path, class: "btn btn-secondary" %>

@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @estudio_type.name %>
-</p>
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @estudio_type.nom %> 
+  </h1>
+  <p class="lead">
+  <strong>Instrucciones:</strong> 
+  <%= @estudio_type.instructions %>   
+  </p>
+  <br/>
 
-<p>
-  <strong>Code:</strong>
-  <%= @estudio_type.code %>
-</p>
-
-<p>
-  <strong>Instructions:</strong>
-  <%= @estudio_type.instructions %>
-</p>
-
-<%= link_to 'Edit', edit_estudio_type_path(@estudio_type) %> |
-<%= link_to 'Back', estudio_types_path %>
+<%= link_to 'Editar', edit_estudio_type_path(@estudio_type), class: "btn btn-secondary" %> |
+<%= link_to 'Atrás', estudio_types_path, class: "btn btn-secondary" %>

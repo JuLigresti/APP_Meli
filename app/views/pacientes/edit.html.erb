@@ -1,7 +1,8 @@
-<h1>Editing Paciente</h1>
+<h1>Editando Paciente</h1>
 
 <%= render 'form', paciente: @paciente %>
 
+<br/>
 
-<%= link_to 'Show', @paciente %> |
-<%= link_to 'Back', pacientes_path %>
+<%= link_to 'Ver', @paciente, class: "btn btn-secondary" %> |
+<%= link_to 'Atrás', pacientes_path, class: "btn btn-secondary" %>

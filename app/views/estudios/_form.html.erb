@@ -11,33 +11,46 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+  <div class="container-fluid">>
     <%= form.label :date %>
+    <br/>
     <%= form.datetime_select :date, class: "form-control" %>
   </div>
+  <br/>
 
-  <div class="field">
+  <div class="container-fluid">>
     <%= form.label :comments %>
+    <br/>
     <%= form.text_area :comments, class: "form-control" %>
   </div>
+<br/>
 
-  <div class ="control-group">
-    <%=form.label :paciente, class: "control-group"%>
-    <div class ="controls">
-      <%= form.collection_select(:paciente_id, Paciente.find_each, :id, :first_name) %>
-  <div class="actions">
+  <div class="container-fluid">
+    <div class ="control-group">
+      <%=form.label :paciente, class: "control-group"%>
+      <div class ="controls">
+        <%= form.collection_select(:paciente_id, Paciente.find_each, :id, :first_name) %>
+    <div class="actions">
+  </div>
 
+<br/>
   <div class ="control-group">
     <%=form.label "Tipo de estudio", class: "control-group"%>
     <div class ="controls">
       <%= form.collection_select(:estudio_type_id, EstudioType.all, :id, :name) %>
 
-<div class="control-group">
+<br/>
+<br/>
+
+  <div class="control-group">
     <%= form.label "Estado Estudio: ", class: 'control-label' %>
     <div class = "controls">
       <%= form.select(:status, options_for_select([['Hecho', 'Hecho'],['Pendiente','Pendiente' ]]), {include_blank: true} )%>
   </div>
 
+
+<br/>
 
 <div class="actions">
     <%= form.submit %>

@@ -11,25 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label "Nombre(s)" %>
-    <%= form.text_field :first_name, class: "form-control" %>
+<div>
+  <div class="field form-group">
+    <% form.label :first_name %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"Nombre(s)" %>
   </div>
 
-  <div class="field">
-    <%= form.label "Apellido(s)" %>
-    <%= form.text_field :last_name, class: "form-control" %>
+  <br/>
+
+  <div class="field form-group">
+    <% form.label :last_name %>
+    <%= form.text_field :last_name, class:"form-control", placeholder:"Apellido" %>
   </div>
 
-  <div class="field">
-    <%= form.label "Teléfono" %>
-    <%= form.text_field :phone, class: "form-control" %>
+  <br/>
+  
+  <div class="field form-group">
+    <%= form.text_field :phone, class: "form-control", placeholder:"# de teléfono" %>
   </div>
 
-  <div class="field">
-    <%= form.label "Correo Eletrónico" %>
-    <%= form.text_field :email, class: "form-control" %>
+  <br/>
+
+  <div class="field form-group">
+        <%= form.text_field :email, class: "form-control", placeholder: "E-mail" %>
   </div>
+
+  <br/>
 
   <div class="field">
     <%= form.label :historial %>
@@ -44,10 +51,11 @@
       <%= form.select(:status_type, options_for_select([['Hecho', 'Hecho'],['Pendiente','Pendiente' ]]), {include_blank: true} )%>
   </div>
 
+  <br/>
 
   <div class="actions">
     <%= form.submit%>
   </div>
 
-
+</div>
 <% end %>

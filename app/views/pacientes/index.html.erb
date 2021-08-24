@@ -4,16 +4,16 @@
 
 <%= render 'pacientes/search_form'%>
 
-<table class="table table-striped table-hover">
-  <thead>
+<br/>
+
+<table class="table  table-light table-striped table-bordered table-hover">
+  <thead class="table-dark">
     <tr>
       <th><%= sort_link(@q, :first_name, "Nombre(s)", default_order: :asc) %></th>
       <th><%= sort_link(@q, :last_name, "Apellido", default_order: :asc) %></th>
       <th>Phone</th>
       <th><%= sort_link(@q, :email, "E-Mail", default_order: :asc) %></th>      
       <th>Historial</th>
-      <th>Estado de estudios</th>
-      <th>Estudio</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,8 @@
         <td><%= paciente.phone %></td>
         <td><%= paciente.email %></td>
         <td><%= paciente.historial %></td>
-        <td><%= paciente.status_type %></td>
-        <td><%= link_to 'Editar', edit_paciente_path(paciente) %></td>
-        <td><%= link_to 'Eliminar', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_paciente_path(paciente), class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Eliminar', paciente, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,5 +35,5 @@
 
 <br>
 
-<%= link_to 'Por Defecto', pacientes_path %> |
-<%= link_to 'Añadir paciente', new_paciente_path %>
+<%= link_to 'Por Defecto', pacientes_path, class: "btn btn-secondary" %> |
+<%= link_to 'Añadir paciente', new_paciente_path, class: "btn btn-secondary" %>
